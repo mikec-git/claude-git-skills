@@ -25,11 +25,29 @@ A conversational blog writing assistant that gathers context before drafting, pr
 
 **Triggers:** "help me write about...", "review my blog", "make this better", "revise my post"
 
-### smart-commit
+### commit
 
-Intelligently analyzes Git changes, groups them by separation of concerns, commits in logical order, and pushes automatically.
+Inspects Git changes, stages intended local repo files, runs focused tests, and creates a structured commit.
 
-**Triggers:** "commit", "push", "commit my changes", "smart commit", "/smart-commit"
+**Triggers:** "commit", "commit my changes", "/commit"
+
+### update-commit-metadata
+
+Updates the latest commit message metadata without changing files.
+
+**Triggers:** "update commit metadata", "rewrite commit message", "retitle commit"
+
+### amend
+
+Amends the latest commit with local changes and pushes rewritten history safely when needed.
+
+**Triggers:** "amend", "amend this", "fold this into the last commit"
+
+### pr
+
+Syncs with main, pushes the current branch, and creates or updates a GitHub pull request.
+
+**Triggers:** "open a PR", "submit a PR", "push a PR", "/pr"
 
 ## Creating New Skills
 
