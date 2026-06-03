@@ -77,8 +77,9 @@ Use only the minimal needed commands:
 - Format: the project's configured formatter / format script
 - Stage: `git add`
 - Commit: `git commit`
+- Amend (when needed): `git commit --amend` — only to refine the latest commit that has NOT been pushed yet (fold in a small fix, or correct the message/format). Never amend a commit already on the remote; never force-push.
 - Push: `git push` (set upstream with `-u` when missing)
 - Archive specs: `openspec archive <change-name> --yes` when an OpenSpec change is complete
 - Verify: repo-specific test/build commands required by the change
 
-Do not merge, rebase, amend, force-push, or create PRs from this skill.
+Do not merge, rebase, force-push, or create PRs from this skill. Amending is allowed only for the latest unpushed commit (see Command Scope); never amend a commit that already exists on the remote.
